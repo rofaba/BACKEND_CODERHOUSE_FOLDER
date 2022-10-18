@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "timestamp": 1657245632172,
+    "productos": [
+      {
+        "title": "Funko Pop Televisión: Men in Black",
+        "thumbnail": "https://m.media-amazon.com/images/I/61gWrFdmcpL._AC_SL1300_.jpg",
+        "codigo": "37707",
+        "price": "24990",
+        "stock": "12",
+        "descripcion": "Buddy: Men In Black: Agent K & Neeble Figura De Vinil , Multicolor",
+        "timestamp": 1657238310200,
+        "id": 1
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "timestamp": 1657245632172,
+    "productos": [
+      {
+        "title": "Funko Pop Televisión: Men in Black",
+        "thumbnail": "https://m.media-amazon.com/images/I/61gWrFdmcpL._AC_SL1300_.jpg",
+        "codigo": "37707",
+        "price": "24990",
+        "stock": "12",
+        "descripcion": "Buddy: Men In Black: Agent K & Neeble Figura De Vinil , Multicolor",
+        "timestamp": 1657238310200,
+        "id": 1
+      },
+      {
+        "title": "Funko Pop Star Wars: The Mandalorian",
+        "thumbnail": "https://m.media-amazon.com/images/I/5176rALHhgS._AC_UL480_FMwebp_QL65_.jpg",
+        "codigo": "2322",
+        "price": "1990",
+        "stock": "7",
+        "descripcion": "Funko Pop Mandalorian With The Child Completamente Nuevo y Original",
+        "id": 2,
+        "timestamp": 1657231377094
+      },
+      {
+        "title": "Funko Pop Silicon Valley: Gilfoyle",
+        "thumbnail": "https://m.media-amazon.com/images/I/41PsLYv3r2L._AC_.jpg",
+        "codigo": "45610",
+        "price": "24990",
+        "stock": "8",
+        "descripcion": "Silicon Valley: Gilfoyle, original nuevo. Sellado.",
+        "id": "3",
+        "timestamp": 1657238881029
+      }
+    ]
+  }
+]

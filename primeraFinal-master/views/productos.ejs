@@ -1,0 +1,151 @@
+<%- include("template/cabecera", {titulo: 'Productos' }) %>
+
+    <body>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+          
+            }
+
+            .panelSuperior {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 10px
+
+            }
+
+            .card-img-top {
+                max-height: 200px;
+                max-width: 150px;
+            }
+        </style>
+
+        <!-- CHECK administrador -->
+        <h2  style="text-align: center"    class="titulo"> TIENDA - BACKEND </h2>
+            <br>
+        <div class="panelSuperior">
+            
+            <a style="width:800px; padding: 10px; margin: 10px;" class="btn btn-dark" href="http://localhost:8080"> Ir a página de INICIO </a> 
+            <a style="width:800px; padding: 10px; margin: 10px;" class="btn btn-dark" href="http://localhost:8080/productos"> Ver todos los productos </a>  
+            <a style="width:800px; padding: 10px; margin: 10px;" class="btn btn-dark" onclick="idGet()"> Ver producto con id: </a> 
+            <input type="number" id="id-get" aria-label=" Last name" class="form-control" placeholder="Ingresar Id producto a ver"> 
+           
+        
+            
+        </div>
+        <br>
+        <br>
+        
+        <!-- Productos -->
+
+        <h3 style="background-color:lightblue"  > Listado de Productos Disponibles</h3>
+        <div class="container-fluid">
+
+
+            <% if(datos.length < 1) { %>
+                <h2>No hay productos para mostrar</h2>
+
+                <% } %>
+
+                    <div class=row>
+                        <% for (var i=0; i < datos.length; i++) { %>
+
+                            <div class="col">
+                                <div class="card">
+
+
+                                    <img src=" <%= datos[i].thumbnail %>" class="card-img-top"
+                                        alt="<%= datos[i].title %>" height="300" width=auto>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <%=datos[i].title%> Id: <%=datos[i].id%>
+                                        </h5>
+                                        <h6 class="card-text">
+                                            # <%= datos[i].codigo %>
+                                        </h6>
+                                        <p class="card-text">
+                                            <%= datos[i].descripcion %>
+                                        </p>
+                                        <p class="card-text">
+                                            Precio: <%= datos[i].price %> Stock:
+                                                <%= datos[i].stock %>
+                                        </p>
+                                        <p class="card-text">
+                                            TS: <%= datos[i].timestamp%>
+                                        </p>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <% } %>
+
+                    </div>
+                    <br>
+
+        </div>
+        
+        <h2 style="background-color:lightblue" > Manejo de Carritos de Compras </h2>
+        <div class="panelSuperior">
+        <a style="width:800px; margin: 10px";  class="btn btn-primary" onclick="crearCarroNuevo()"> Crear Carro Nuevo </a> 
+        <a style="width:800px; margin: 10px" class="btn btn-primary" onclick="deleteCarro()" > Eliminar Carro por ID </a> 
+        <input type="number" id="idcarroborrar" aria-label=" Last name" class="form-control" placeholder="Ingresar Id de Carro a Eliminar"> 
+        <a style="width:800px; margin: 10px" class="btn btn-primary" onclick="irCarroNumero()"> Ir al Carro de Compras Id: </a> 
+        <input type="number" id="irCarroId" aria-label=" Last name" class="form-control" placeholder="Ingresar Id Carro a ver"> 
+        </div>
+<script>
+
+        function irCarroNumero() {
+                const numcarro = document.querySelector('#irCarroId').value;
+                window.location.href = `http://localhost:8080/carrito/${numcarro}/productos`;
+            }
+
+            function idGet() {
+                const numproduct = document.querySelector('#id-get').value;
+                window.location.href = `http://localhost:8080/productos/${numproduct}`
+            }
+
+            function crearCarroNuevo() {
+                const postmethod = {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8',
+                    },
+                    body: JSON.stringify(
+                        {
+                            "id": 0,
+                            "timestamp": 123,
+                            "productos":
+                                [  ]
+                        })
+                }
+            fetch(`http://localhost:8080/carrito`, postmethod)
+            .catch(err => console.log(err))        
+        }
+        
+        function deleteCarro() {
+            let num = document.querySelector('#idcarroborrar').value;
+            fetch(`http://localhost:8080/carrito/${num}`, {
+                    method: "DELETE",
+                    headers: {
+                    'Content-type': 'application/json'
+            },
+                })
+               
+            } 
+
+            function actualizarCarro() {
+                location.reload();
+            }
+        </script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    </body>
+
+    </html>

@@ -1,0 +1,128 @@
+<%- include("template/cabecera", {titulo: 'Carro de Compras' }); -%>
+
+    <body>
+        <div class="container-fluid">
+            <h1 style="text-align:center; background-color: lightblue;"> Carro de Compras </h1>
+            <br>
+            <h3> Id Carro: <%= datosCarrito.id %>
+            </h3>
+            <h3> Timestamp Carro: <%= datosCarrito.timestamp %>
+            </h3>
+
+            <hr>
+            </h3>
+            <a class="btn btn-secondary" onclick="agregarProducto()"> Agregar producto a carro por Id de ambos</a>
+            <input type="number" id="id-carro" aria-label=" Last name" placeholder="id carro">
+            <input type="number" id="id-producto" aria-label=" Last name" placeholder="id producto">
+            <br>
+            <br>
+            <a class="btn btn-secondary" onclick="eliminarProdCarro()"> Eliminar producto a carro por Id de ambos</a>
+            <input type="number" id="id-carrodel" aria-label=" Last name" placeholder="id carro">
+            <input type="number" id="id-productodel" aria-label=" Last name" placeholder="id producto">
+            <br>
+            <hr>
+            <a class="btn btn-primary" onclick="actualizarCarro()"> Actualizar Carro </a>
+            <br>
+            <br>
+
+
+            <a class="btn btn-primary" href="http://localhost:8080/productos"> Cerrar </a>
+        </div>
+        <div class="offcanvas-body">
+            <div class="tablaCarro">
+                <table class="table">
+
+                    <% if(datosProductos.length < 1) { %>
+                        <h2>No hay productos para mostrar</h2>
+
+                        <% } else { %>
+
+                            <tr>
+                                <th scope=col> Id </th>
+                                <th scope=col> Timestamp </th>
+                                <th scope=col> Nombre </th>
+                                <th scope=col> Descripcion </th>
+                                <th scope=col> Código </th>
+                                <th scope=col> Imagen </th>
+                                <th scope=col> Precio </th>
+                                <th scope=col> Stock </th>
+
+                            </tr>
+                            <% for (var i=0; i < datosProductos.length; i++) { %>
+                                <tr scope=row>
+                                    <td>
+                                        <%= datosProductos[i].id %>
+                                    </td>
+                                    <td>
+                                        <%= datosProductos[i].timestamp %>
+                                    </td>
+                                    <td>
+                                        <%= datosProductos[i].title %>
+                                    </td>
+                                    <td>
+                                        <%= datosProductos[i].descripcion %>
+                                    </td>
+                                    <td>
+                                        <%= datosProductos[i].codigo %>
+                                    </td>
+                                    <td>
+                                        <img src="<%= datosProductos[i].thumbnail %>"
+                                            alt="<%= datosProductos[i].title %>" width="50px">
+                                    </td>
+
+                                    <td>
+                                        <%= datosProductos[i].price %>
+                                    </td>
+                                    <td>
+                                        <%= datosProductos[i].stock %>
+                                    </td>
+
+                                    <br>
+                                </tr>
+                                <% } %>
+
+
+                                    <% } %>
+                </table>
+            </div>
+        </div>
+        </div>
+        <script>
+
+            function agregarProducto() {
+                let carroId = document.querySelector('#id-carro').value;
+                let productoId = document.querySelector('#id-producto').value;
+
+                fetch(`http://localhost:8080/carrito/${carroId}/productos/${productoId}`, {
+                    method: "POST",
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                })
+
+            }
+
+            function actualizarCarro() {
+                location.reload();
+            }
+
+            function eliminarProdCarro() {
+                const id = document.querySelector('#id-carrodel').value;
+                const id_product = document.querySelector('#id-productodel').value;
+
+                fetch(`http://localhost:8080/carrito/${id}/productos/${id_product}`, {
+                    method: "DELETE",
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                })
+
+            }
+
+            function actualizarCarro() {
+                location.reload();
+            }
+        </script>
+    </body>
+
+    </html>

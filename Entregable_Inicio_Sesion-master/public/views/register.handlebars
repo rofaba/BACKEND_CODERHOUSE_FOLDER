@@ -1,0 +1,19 @@
+<div class="container bg-light p-3 rounded">
+  <h2 class="text-primary">Registro nuevo usuario</h2>
+  <form action="http://localhost:3000/register" method="post">
+    <div class="mb-3">
+      <label for="title" class="form-label">Ingrese su nombre</label>
+      <input type="text" class="form-control" name = "name" required />
+      <label for="title" class="form-label">Ingrese su email (username)</label>
+      <input type="email" class="form-control" name = "username" required />
+      <label for="title" class="form-label">Ingrese su password</label>
+      <input type="password" class="form-control" name = "password" required />
+   
+    </div>
+    <button type="submit" class="btn btn-success">Registrar nuevo usuario</button>
+  </form>
+<br>
+  <a href="http://localhost:3000" class="btn btn-primary"> Ir a Login </a>
+<br>
+
+</div>

@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "rofaba",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/000/550/980/small/user_icon_001.jpg"
+    },
+    "text": {
+      "message": "hola Mundo",
+      "id": 1
+    }
+  },
+  {
+    "id": 2,
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "rofaba",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/000/550/980/small/user_icon_001.jpg"
+    },
+    "text": {
+      "message": "Mensaje Prueba Dos",
+      "id": 2
+    }
+  },
+  {
+    "id": 3,
+    "author": {
+      "id": "elpepe@gmail.com",
+      "nombre": "Pepe",
+      "apellido": "Trueno",
+      "edad": "55",
+      "alias": "PepeThunder",
+      "avatar": "https://i1.sndcdn.com/avatars-000668621474-g5g0sa-t240x240.jpg"
+    },
+    "text": {
+      "message": "Usuario número Dos",
+      "id": 3
+    }
+  },
+  {
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "The Rock",
+      "avatar": "https://i.pinimg.com/474x/ac/95/1a/ac951a6b30df48534984de9fdece79e6.jpg"
+    },
+    "text": {
+      "message": "If you smeeeell...",
+      "id": 4
+    }
+  }
+]

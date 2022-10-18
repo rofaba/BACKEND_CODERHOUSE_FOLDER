@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "rofaba",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/000/550/980/small/user_icon_001.jpg"
+    },
+    "text": {
+      "message": "hola Mundo",
+      "id": 1
+    }
+  },
+  {
+    "id": 2,
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "rofaba",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/000/550/980/small/user_icon_001.jpg"
+    },
+    "text": {
+      "message": "Mensaje Prueba Dos",
+      "id": 2
+    }
+  },
+  {
+    "id": 3,
+    "author": {
+      "id": "elpepe@gmail.com",
+      "nombre": "Pepe",
+      "apellido": "Trueno",
+      "edad": "55",
+      "alias": "PepeThunder",
+      "avatar": "https://i1.sndcdn.com/avatars-000668621474-g5g0sa-t240x240.jpg"
+    },
+    "text": {
+      "message": "Usuario número Dos",
+      "id": 3
+    }
+  },
+  {
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "Heinsenberg",
+      "avatar": "https://pm1.narvii.com/6736/c8106a2e8788f41218f9efd14e40e8a66209354dv2_128.jpg"
+    },
+    "text": {
+      "message": "Mensaje Prueba 3",
+      "id": 4
+    }
+  },
+  {
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "Heinsenberg",
+      "avatar": "https://pbs.twimg.com/profile_images/665572678762438657/lLwjKrq7_400x400.png"
+    },
+    "text": {
+      "message": "Mensaje Prueba TRES",
+      "id": 4
+    }
+  },
+  {
+    "author": {
+      "id": "rodrigofaure@gmail.com",
+      "nombre": "Rodrigo",
+      "apellido": "Faure",
+      "edad": "46",
+      "alias": "PepeThunder",
+      "avatar": "https://i1.sndcdn.com/avatars-000668621474-g5g0sa-t240x240.jpg"
+    },
+    "text": {
+      "message": "hola a todos",
+      "id": 4
+    }
+  }
+]

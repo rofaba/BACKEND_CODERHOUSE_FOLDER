@@ -1,0 +1,7 @@
+[
+  {
+    "author": "Chat_Bot",
+    "text": "Bienvenido, esto son los mensajes disponibles.",
+    "fecha": " "
+  }
+]

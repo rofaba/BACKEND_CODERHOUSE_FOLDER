@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>Productos</title>
+</head>
+
+<body>
+   
+    <h1 style="background-color: lightblue;"> Lista de Productos </h1>
+      <table class="table table-striped">
+    <% if(datos.length < 1) { %>
+        <h2>No hay productos para mostrar</h2>
+        
+    <% } else { %>
+          
+                <tr style="background-color: lightblue; margin: 10px;">
+                <th> Id </th>
+                <th> Nombre </th>
+                <th> Precio </th>
+                <th> Imagen </th>
+                </tr><br>
+                <% for (var i=0; i < datos.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= datos[i].id %>
+                        </td>
+                        <td>
+                            <%= datos[i].title %>
+                        </td>
+                        <td>
+                            <%= datos[i].price %>
+                        </td>
+                        <td>
+                            <img src="<%= datos[i].thumbnail %>" alt="<%= datos[i].title %>" width="50px">
+                        </td><br>
+                    </tr>
+                    <% } %>
+            
+        
+             <% } %>
+    </table>
+            <br>
+            <br>
+            <a  class = "btn btn-button" style="border: 1px solid black; background-color:bisque"   href="http://localhost:8080">Ir a Formulario Ingreso</a>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>

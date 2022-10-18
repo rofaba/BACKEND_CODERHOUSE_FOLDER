@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "handlebars": "^4.7.7",
+    "knex": "^2.1.0",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.18",
+    "socket.io": "^4.5.1",
+    "sqlite3": "^5.0.8"
+  },
+  "name": "websockets",
+  "description": "Repositorio de GitHub",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rofaba/websockets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rofaba/websockets/issues"
+  },
+  "homepage": "https://github.com/rofaba/websockets#readme"
+}

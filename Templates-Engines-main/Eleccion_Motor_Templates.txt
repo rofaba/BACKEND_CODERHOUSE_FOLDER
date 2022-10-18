@@ -1,0 +1,1 @@
+A mí el motor de template que más me gustó fue EJS, por su curva de apredizaje más amigable y su "compatibilidad" con Javascript. Creo que se adaptaría de mejor manera a mi proyecto, en segundo lugar tendría que mencionar a Handlebars. El manejo de errores de EJS también me pareció más apropiado para todos quienes estamos aprendiendo.

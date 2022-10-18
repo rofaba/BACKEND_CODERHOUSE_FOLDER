@@ -1,0 +1,11 @@
+{{!-- LOGOUT --}}
+
+<div class="container alert alert-primary p-3">
+  <h2 class="text-primary"> Hasta luego {{usuario}}, vuelve pronto </h2>
+</div>
+<script>
+  setTimeout(function () {
+     // 2 seconds para rfedirigir a login
+     window.location = "/";
+  }, 2000)
+</script>

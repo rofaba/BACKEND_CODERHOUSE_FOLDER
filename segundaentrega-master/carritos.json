@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "timestamp": 1657305181877,
+      "productos":    [
+          {
+              "title": "Funko Pop Silicon Valley: Gilfoyle",
+              "thumbnail": "https://m.media-amazon.com/images/I/41PsLYv3r2L._AC_.jpg",
+              "codigo": "45610",
+              "price": "24990",
+              "stock": "8",
+              "descripcion": "Silicon Valley: Gilfoyle, original nuevo. Sellado.",
+              "id": "3",
+              "timestamp": 1657238881029
+          }
+                      ]
+    }
+  ]

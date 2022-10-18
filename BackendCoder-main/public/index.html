@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario</title>
+</head>
+
+<body style="background-color: lightblue;">
+    <h1>Servidor API RESTful Entregable IV Backend</h1>
+    <h2>Se recomienda utilizar Postman App para validación de rutas</h2>
+
+    <p> GET '/api/productos' -> devuelve todos los productos.</p>
+    <p> GET '/api/productos/:id' -> devuelve un producto según su id.</p>
+    <p> POST '/api/productos' -> recibe y agrega un producto, y lo devuelve con su id asignado.</p>
+    <p> PUT '/api/productos/:id' -> recibe y actualiza un producto según su id.</p>
+    <p> DELETE '/api/productos/:id' -> elimina un producto según su id.</p>
+
+    </p>
+
+    <p> Para agregar un producto utilice el siguiente formulario: </p>
+
+    <div class="contenedor">
+        <form action="/api/productos" method="post">
+            <label for="POST-name"> Title : </label>
+            <input id="POST-name" type="text" name="title"> <br>
+
+            <label for="POST-name"> Price : </label>
+            <input id="POST-name" type="text" name="price"> <br>
+
+            <label for="POST-name"> Thumbnail : </label>
+            <input id="POST-name" type="text" name="thumbnail"> <br>
+
+            <input type="submit" value="Save">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>#Frontend it's my passion :) </footer>
+</body>
+
+</html>

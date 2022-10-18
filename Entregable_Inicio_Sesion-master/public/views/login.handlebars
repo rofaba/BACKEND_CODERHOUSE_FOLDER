@@ -1,0 +1,18 @@
+{{!-- formulario de ingreso --}}
+<div class="container bg-light p-3 rounded">
+  <h2 class="text-primary">Login de usuario registrado</h2>
+  <form action="http://localhost:3000/login" method="post">
+    <div class="mb-3">
+      <label for="title" class="form-label">Ingrese su email para iniciar sesión</label>
+      <input type="text" class="form-control" name = "username" required />
+      <label for="title" class="form-label">Ingrese su password</label>
+      <input type="password" class="form-control" name = "password" required />
+    </div>
+    <button type="submit" class="btn btn-success">Ingresar</button>
+  </form>
+<br>
+  <h2 class="text-primary">Registro nuevo usuario </h2>
+  <a href="http://localhost:3000/register" class="btn btn-primary"> Registrarse </a>
+<br>
+
+</div>
